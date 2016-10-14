@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batchResponse xmlns="urn:oasis:names:tc:DSML:2:0:core" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <searchResponse>
+      <searchResultEntry dn="cn=Robert Browning+sn=Browning,ou=users,o=mojo">
+         <attr name="uid">
+            <value>rbrowning</value>
+         </attr>
+         <attr name="sn">
+            <value>Browning</value>
+         </attr>
+         <attr name="cn">
+            <value>Robert Browning</value>
+         </attr>
+         <attr name="objectClass">
+            <value>top</value>
+            <value>inetOrgPerson</value>
+            <value>person</value>
+            <value>organizationalPerson</value>
+         </attr>
+         <attr name="userPassword">
+            <value xsi:type="xsd:base64Binary">e1NTSEF9V2pxbEtyOVpzekJiUkhhek5XTkNvTFg0cUdOSThNSjFxYmdPaEE9PQ==</value>
+         </attr>
+      </searchResultEntry>
+      <searchResultEntry dn="cn=John Milton+sn=Milton,ou=users,o=mojo">
+         <attr name="uid">
+            <value>jmilton</value>
+         </attr>
+         <attr name="sn">
+            <value>Milton</value>
+         </attr>
+         <attr name="cn">
+            <value>John Milton</value>
+         </attr>
+         <attr name="objectClass">
+            <value>top</value>
+            <value>inetOrgPerson</value>
+            <value>person</value>
+            <value>organizationalPerson</value>
+         </attr>
+         <attr name="userPassword">
+            <value xsi:type="xsd:base64Binary">e1NTSEF9VHNDbDlteUc5bnFHcFQ3V0JiaE1tY2k4N1Nhb0xvbkxtY01oZlE9PQ==</value>
+         </attr>
+      </searchResultEntry>
+      <searchResultEntry dn="ou=users,o=mojo">
+         <attr name="ou">
+            <value>users</value>
+         </attr>
+         <attr name="objectClass">
+            <value>top</value>
+            <value>organizationalUnit</value>
+         </attr>
+      </searchResultEntry>
+      <searchResultEntry dn="cn=John Keats+sn=Keats,ou=users,o=mojo">
+         <attr name="uid">
+            <value>jkeats</value>
+         </attr>
+         <attr name="sn">
+            <value>Keats</value>
+         </attr>
+         <attr name="cn">
+            <value>John Keats</value>
+         </attr>
+         <attr name="objectClass">
+            <value>top</value>
+            <value>inetOrgPerson</value>
+            <value>person</value>
+            <value>organizationalPerson</value>
+         </attr>
+         <attr name="userPassword">
+            <value xsi:type="xsd:base64Binary">e1NTSEF9c1dRbjZLNHVBOFEyNi9OZVJPdkcyUHlVYlBRelpLRmdBR1VOVHc9PQ==</value>
+         </attr>
+      </searchResultEntry>
+      <searchResultEntry dn="ou=groups,o=mojo">
+         <attr name="ou">
+            <value>groups</value>
+         </attr>
+         <attr name="objectClass">
+            <value>top</value>
+            <value>organizationalUnit</value>
+         </attr>
+      </searchResultEntry>
+      <searchResultEntry dn="cn=Hugo Williams+sn=Williams,ou=users,o=mojo">
+         <attr name="uid">
+            <value>hwilliams</value>
+         </attr>
+         <attr name="sn">
+            <value>Williams</value>
+         </attr>
+         <attr name="cn">
+            <value>Hugo Williams</value>
+         </attr>
+         <attr name="objectClass">
+            <value>top</value>
+            <value>inetOrgPerson</value>
+            <value>person</value>
+            <value>organizationalPerson</value>
+         </attr>
+         <attr name="userPassword">
+            <value xsi:type="xsd:base64Binary">e1NTSEF9U2Q2Um41VTlONktDYWNNUVRpbytoMVd2RzJPekNWN0prSXhlMUE9PQ==</value>
+         </attr>
+      </searchResultEntry>
+      <searchResultEntry dn="o=mojo">
+         <attr name="objectclass">
+            <value>domain</value>
+            <value>top</value>
+            <value>extensibleObject</value>
+         </attr>
+         <attr name="dc">
+            <value>mojo</value>
+         </attr>
+         <attr name="o">
+            <value>mojo</value>
+         </attr>
+      </searchResultEntry>
+      <searchResultEntry dn="cn=User,ou=groups,o=mojo">
+         <attr name="uniqueMember">
+            <value>cn=Hugo Williams,ou=users,o=mojo</value>
+            <value>cn=John Keats,ou=users,o=mojo</value>
+            <value>cn=John Milton,ou=users,o=mojo</value>
+            <value>cn=Robert Browning,ou=users,o=mojo</value>
+         </attr>
+         <attr name="cn">
+            <value>User</value>
+         </attr>
+         <attr name="objectClass">
+            <value>top</value>
+            <value>groupOfUniqueNames</value>
+         </attr>
+      </searchResultEntry>
+      <searchResultEntry dn="cn=Admin,ou=groups,o=mojo">
+         <attr name="uniqueMember">
+            <value>cn=Hugo Williams,ou=users,o=mojo</value>
+            <value>cn=John Keats,ou=users,o=mojo</value>
+         </attr>
+         <attr name="cn">
+            <value>Admin</value>
+         </attr>
+         <attr name="objectClass">
+            <value>top</value>
+            <value>groupOfUniqueNames</value>
+         </attr>
+      </searchResultEntry>
+      <searchResultDone>
+         <resultCode code="0" descr="success"/>
+      </searchResultDone>
+   </searchResponse>
+</batchResponse>

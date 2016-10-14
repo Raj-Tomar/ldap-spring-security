@@ -1,0 +1,79 @@
+version: 1
+
+dn: cn=Robert Browning+sn=Browning,ou=users,o=mojo
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: Robert Browning
+sn: Browning
+uid: rbrowning
+userPassword:: e1NTSEF9V2pxbEtyOVpzekJiUkhhek5XTkNvTFg0cUdOSThNSjFxYmdPaEE9P
+ Q==
+
+dn: cn=John Milton+sn=Milton,ou=users,o=mojo
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: John Milton
+sn: Milton
+uid: jmilton
+userPassword:: e1NTSEF9VHNDbDlteUc5bnFHcFQ3V0JiaE1tY2k4N1Nhb0xvbkxtY01oZlE9P
+ Q==
+
+dn: ou=users,o=mojo
+objectClass: organizationalUnit
+objectClass: top
+ou: users
+
+dn: cn=John Keats+sn=Keats,ou=users,o=mojo
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: John Keats
+sn: Keats
+uid: jkeats
+userPassword:: e1NTSEF9c1dRbjZLNHVBOFEyNi9OZVJPdkcyUHlVYlBRelpLRmdBR1VOVHc9P
+ Q==
+
+dn: ou=groups,o=mojo
+objectClass: organizationalUnit
+objectClass: top
+ou: groups
+
+dn: cn=Hugo Williams+sn=Williams,ou=users,o=mojo
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: Hugo Williams
+sn: Williams
+uid: hwilliams
+userPassword:: e1NTSEF9U2Q2Um41VTlONktDYWNNUVRpbytoMVd2RzJPekNWN0prSXhlMUE9P
+ Q==
+
+dn: o=mojo
+objectclass: extensibleObject
+objectclass: top
+objectclass: domain
+dc: mojo
+o: mojo
+
+dn: cn=User,ou=groups,o=mojo
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: User
+uniqueMember: cn=Hugo Williams,ou=users,o=mojo
+uniqueMember: cn=John Keats,ou=users,o=mojo
+uniqueMember: cn=John Milton,ou=users,o=mojo
+uniqueMember: cn=Robert Browning,ou=users,o=mojo
+
+dn: cn=Admin,ou=groups,o=mojo
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: Admin
+uniqueMember: cn=Hugo Williams,ou=users,o=mojo
+uniqueMember: cn=John Keats,ou=users,o=mojo
+
