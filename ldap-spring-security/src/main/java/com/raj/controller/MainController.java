@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/main")
 public class MainController {
 
-	protected static Logger logger = Logger.getLogger("controller");
+	protected static Logger logger = Logger.getLogger(MainController.class);
 	
 	/**
 	 * Handles and retrieves the common JSP page that everyone can see
@@ -32,6 +32,7 @@ public class MainController {
     	// This will resolve to /WEB-INF/jsp/commonpage.jsp
     	return "commonpage";
 	}
+    
     
     /**
      * Handles and retrieves the admin JSP page that only admins can see
