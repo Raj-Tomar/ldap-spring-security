@@ -9,9 +9,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Login</title>
+
+<link href="<c:url value="/resources/css/user-css.css"/>" rel="stylesheet" type="text/css">
 </head>
 <body>
-
+ <div class="loginForm">
 <h1>Login</h1>
 
 <div id="login-error">${error}</div>
@@ -31,6 +33,6 @@
 <input  type="submit" value="Login"/>								
 	
 </form>
-
+</div>
 </body>
 </html>

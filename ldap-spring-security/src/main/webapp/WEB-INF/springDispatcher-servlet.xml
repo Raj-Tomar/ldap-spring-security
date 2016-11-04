@@ -21,6 +21,7 @@
 	<!-- Scans the classpath for annotated components that will be auto-registered as Spring beans.
 	 For example @Controller and @Service. Make sure to set the correct base-package-->
 	<context:component-scan base-package="com.raj.*" />
+	<context:property-placeholder location="classpath:hibernate.properties"/>
 	
 	<mvc:resources mapping="/**" location="/" />
 	<!-- Configures the annotation-driven Spring MVC Controller programming model.
@@ -31,6 +32,35 @@
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp/"></property>
 		<property name="suffix" value=".jsp"></property>
+	</bean>
+	
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${database.driver}"></property>
+		<property name="url" value="${database.url}"></property>
+		<property name="username" value="${database.user}"></property>
+		<property name="password" value="${database.password}"></property>
+	</bean>
+	
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="annotatedClasses">
+			<list>
+				<value>com.raj.beans.UserBean</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+				<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto} </prop>
+			</props>
+		</property>
+	</bean>
+	
+	<tx:annotation-driven/>
+
+	<bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 
 </beans>

@@ -1,4 +1,4 @@
-package com.raj.controller;
+package com.raj.user.controller;
 
 
 import org.apache.log4j.Logger;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 @Controller
 public class LoginLogoutController {
-        
+
 	protected static Logger logger = Logger.getLogger(LoginLogoutController.class);
 
 	/**
@@ -21,7 +21,7 @@ public class LoginLogoutController {
 	 * 
 	 * @return the name of the JSP page
 	 */
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String getLoginPage(@RequestParam(value="error", required=false) boolean error, 
 			ModelMap model) {
 		logger.info("Received request to show login page");
@@ -41,11 +41,11 @@ public class LoginLogoutController {
 		} else {
 			model.put("error", "");
 		}
-		
+
 		// This will resolve to /WEB-INF/jsp/loginpage.jsp
 		return "loginpage";
 	}
-	
+
 	/**
 	 * Handles and retrieves the denied JSP page. This is shown whenever a regular user
 	 * tries to access an admin only page.
@@ -53,10 +53,45 @@ public class LoginLogoutController {
 	 * @return the name of the JSP page
 	 */
 	@RequestMapping(value = "/denied", method = RequestMethod.GET)
- 	public String getDeniedPage() {
+	public String getDeniedPage() {
 		logger.info("Received request to show denied page");
-		
+
 		// This will resolve to /WEB-INF/jsp/deniedpage.jsp
 		return "deniedpage";
+	}
+
+	/**
+	 * Handles and retrieves the common JSP page that everyone can see
+	 * 
+	 * @return the name of the JSP page
+	 */
+	@RequestMapping(value = "/common", method = RequestMethod.GET)
+	public String getCommonPage() {
+		logger.info("Received request to show common page");
+
+		// Do your work here. Whatever you like
+		// i.e call a custom service to do your business
+		// Prepare a model to be used by the JSP page
+
+		// This will resolve to /WEB-INF/jsp/commonpage.jsp
+		return "commonpage";
+	}
+
+
+	/**
+	 * Handles and retrieves the admin JSP page that only admins can see
+	 * 
+	 * @return the name of the JSP page
+	 */
+	@RequestMapping(value = "/admin", method = RequestMethod.GET)
+	public String getAdminPage() {
+		logger.info("Received request to show admin page");
+
+		// Do your work here. Whatever you like
+		// i.e call a custom service to do your business
+		// Prepare a model to be used by the JSP page
+
+		// This will resolve to /WEB-INF/jsp/adminpage.jsp
+		return "adminpage";
 	}
 }
