@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
 <batchResponse xmlns="urn:oasis:names:tc:DSML:2:0:core" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <searchResponse>
+      <searchResultEntry dn="cn=Raj Tomar,ou=users,o=mojo">
+         <attr name="uid">
+            <value>rajtomar</value>
+         </attr>
+         <attr name="sn">
+            <value>Tomar</value>
+         </attr>
+         <attr name="cn">
+            <value>Raj Tomar</value>
+         </attr>
+         <attr name="objectClass">
+            <value>top</value>
+            <value>inetOrgPerson</value>
+            <value>person</value>
+            <value>organizationalPerson</value>
+         </attr>
+         <attr name="userPassword">
+            <value xsi:type="xsd:base64Binary">e1NTSEF9SEhBcEFic2pvemZ5UTdFMFUyUFNCZ2x2MWJLWnZBRHdSUjZVZGc9PQ==</value>
+         </attr>
+      </searchResultEntry>
       <searchResultEntry dn="cn=Robert Browning+sn=Browning,ou=users,o=mojo">
          <attr name="uid">
             <value>rbrowning</value>
@@ -118,6 +139,7 @@
             <value>cn=John Keats,ou=users,o=mojo</value>
             <value>cn=John Milton,ou=users,o=mojo</value>
             <value>cn=Robert Browning,ou=users,o=mojo</value>
+            <value>cn=Raj Tomar,ou=users,o=mojo</value>
          </attr>
          <attr name="cn">
             <value>User</value>
@@ -131,6 +153,7 @@
          <attr name="uniqueMember">
             <value>cn=Hugo Williams,ou=users,o=mojo</value>
             <value>cn=John Keats,ou=users,o=mojo</value>
+            <value>cn=Raj Tomar,ou=users,o=mojo</value>
          </attr>
          <attr name="cn">
             <value>Admin</value>

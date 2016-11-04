@@ -1,5 +1,16 @@
 version: 1
 
+dn: cn=Raj Tomar,ou=users,o=mojo
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: Raj Tomar
+sn: Tomar
+uid: rajtomar
+userPassword:: e1NTSEF9SEhBcEFic2pvemZ5UTdFMFUyUFNCZ2x2MWJLWnZBRHdSUjZVZGc9P
+ Q==
+
 dn: cn=Robert Browning+sn=Browning,ou=users,o=mojo
 objectClass: organizationalPerson
 objectClass: person
@@ -69,6 +80,7 @@ uniqueMember: cn=Hugo Williams,ou=users,o=mojo
 uniqueMember: cn=John Keats,ou=users,o=mojo
 uniqueMember: cn=John Milton,ou=users,o=mojo
 uniqueMember: cn=Robert Browning,ou=users,o=mojo
+uniqueMember: cn=Raj Tomar,ou=users,o=mojo
 
 dn: cn=Admin,ou=groups,o=mojo
 objectClass: groupOfUniqueNames
@@ -76,4 +88,5 @@ objectClass: top
 cn: Admin
 uniqueMember: cn=Hugo Williams,ou=users,o=mojo
 uniqueMember: cn=John Keats,ou=users,o=mojo
+uniqueMember: cn=Raj Tomar,ou=users,o=mojo
 

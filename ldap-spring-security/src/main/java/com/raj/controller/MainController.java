@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * the adminpage, however.
  */
 @Controller
-@RequestMapping("/main")
 public class MainController {
 
 	protected static Logger logger = Logger.getLogger(MainController.class);
